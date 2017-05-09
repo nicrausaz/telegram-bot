@@ -16,27 +16,19 @@ def start(bot, update):
 def ranking(bot, update):
     categories = ['Rank', 'Team', 'Games', 'Win', 'Loose', 'FF', 'Scored', 'Encaissé','Score', 'Points']
     update.message.reply_text('Rankings:')
-    for i in range(0,5) :
-        rank = rankings[i].text.split('\n')
+
+    
+
+    for rank in rankings:
+        rank = rank.text.split('\n')
         rank = [x for x in rank if x]
+        text = ""
+        
+        for i in range(len(categories)) :          
 
-        print(rank)
+            text += "%s : %s " % (categories[i], rank[i])
 
-    # test = ['', '1', '', 'Morges TEAM COSMO U19', '', '9', '8', '1', '0', '778', '490', '288', '17', '']
-    # test.pop(0)
-    # print(test)
-
-    #for rank in rankings:
-        # print(rank.text)
-        # print(rank.text.split('\n'))
-        # rank.pop(0)
-        # print(rank.text)
-    #     rank.pop(2)
-    #     rank.pop(13)
-    #     print(rank)
-    #     update.message.reply_text(categories[i] + " : " + rank.text)
-    #     i += 1
-
+        update.message.reply_text(text)
 def table(bot, update):
     button_list = [
     InlineKeyboardButton("col 1", ...),
