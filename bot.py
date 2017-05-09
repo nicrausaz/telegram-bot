@@ -23,10 +23,10 @@ def ranking(bot, update):
         rank = rank.text.split('\n')
         rank = [x for x in rank if x]
         text = ""
-        
+
         for i in range(len(categories)) :          
 
-            text += "%s : %s " % (categories[i], rank[i])
+            text += "%s : %s \r\n" % (categories[i], rank[i])
 
         update.message.reply_text(text)
 def table(bot, update):
