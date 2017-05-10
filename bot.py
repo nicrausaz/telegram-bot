@@ -41,7 +41,7 @@ def table(bot, update):
     reply_markup = InlineKeyboardMarkup(util.build_menu(button_list, n_cols=2))
 
 
-updater = Updater('388939599:AAEEarbs86EH7_jCmhQY2WAzzJa-6Wg0hrk')
+updater = Updater('')
 
 updater.dispatcher.add_handler(CommandHandler('start', start))
 updater.dispatcher.add_handler(CommandHandler('ranking', ranking))
