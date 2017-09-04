@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import requests
 
 # Request and soup
-rankingPage = requests.get('https://www.basketplan.ch/showRankingForLeague.do?leagueHoldingId=5621')
+rankingPage = requests.get('https://www.basketplan.ch/showRankingForLeague.do?leagueHoldingId=5906')
 rankingPageTextContent = rankingPage.text
 soup = BeautifulSoup(rankingPageTextContent, 'html.parser')
 rankings = soup.findAll("tr", {"onmouseout":"resetThisRowColor(this)"})
